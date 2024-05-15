@@ -21,17 +21,14 @@ public class Project {
 		System.out.print("Tax: ");
 		employee.tax = sc.nextDouble();
 		
-		double netSalary = employee.netSalary();
-		
-		System.out.println("Employee: " + employee.name + ", $ " + netSalary);
+		System.out.println("Employee: " + employee.name + ", $ " + employee.netSalary());
 		
 		System.out.print("Wish percentage to increase salary? ");
 		double percentage = sc.nextDouble();
 		
 		employee.increaseSalary(percentage);
-		netSalary += employee.grossSalary;
 		
-		System.out.println("Updated data: " + employee.name + ", $ " + netSalary);
+		System.out.println("Updated data: " + employee.name + ", $ " + employee.netSalary());
 		
 		sc.close();
 
